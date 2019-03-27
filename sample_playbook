@@ -1,0 +1,8 @@
+---
+- name: Deploy Terraform
+  hosts: terraform
+  become: True
+  tasks:
+    - include_role:
+        name: terraform
+

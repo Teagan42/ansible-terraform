@@ -1,0 +1,19 @@
+---
+
+- name: Add the OS specific varibles
+  include_vars: "{{ ansible_os_family }}.yml"
+
+- name: Install required packages
+  apt:
+    name: "{{ installation_pkgs }}"
+    update_cache: yes
+    state: latest
+
+- name: Download and unzip
+  unarchive:
+    src: "{{ terraform_zip_url }}"
+    dest: "{{ terraform_bin_dest }}"
+    remote_src: yes
+    mode: 0775
+
+- 

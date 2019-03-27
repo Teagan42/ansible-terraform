@@ -1,0 +1,5 @@
+# TODO: Architecture, etc.
+
+terraform_zip_url: 'https://releases.hashicorp.com/terraform/{{terraform_version}}/terraform_{{terraform_version}}_linux_amd64.zip'
+
+terraform_bin_dest: /usr/local/bin
